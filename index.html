@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>下拉框小测试</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style>
+        .divSource {
+            width: 930px;
+            height: 100px;
+        }
+        #back{
+            width: 930px;
+        }
+    </style>
+</head>
+<div id="back" ng-app="">
+    <div>
+        <p style="float:left"><span style="color: red">*</span> 请填写备注</ps>
+        <p style="float: right">({{textdiv.length}}/200)</p>
+    </div>
+
+    <textarea class="divSource" type="text" ng-model="textdiv" placeholder="请最多输入200个字符"></textarea>
+    <div class="mes" ></div>
+</div>
+<script>
+   var lengthm = document.getElementsByClassName("divSource");
+   var t = lengthm.length;
+
+   if(t>3){/''
+       document.getElementsByClassName("mes").innerHTML="亲，此项内容填写长度不能超过200个字符哦"
+   }
+
+</script>
+</body>
+</html>
